@@ -158,6 +158,16 @@ az group exists --name azure-vm-monitoring-lab-rg
 
 The expected result is `false`.
 
+## Lab evidence
+
+### Network Security Group rules
+
+The NSG permits SSH on port 22 only from the administrator's single masked
+public IP (`/32`). HTTP on port 80 is available publicly so visitors can reach
+the Nginx website.
+
+![Azure NSG rules showing restricted SSH and public HTTP access](screenshots/nsg-rules.png)
+
 ## Screenshot safety
 
 Do not include subscription IDs, tenant IDs, email addresses, tokens, passwords,
@@ -175,4 +185,3 @@ learning value.
 - [ ] Failure scenarios diagnosed
 - [ ] Sanitized evidence added
 - [ ] Resource group deleted and deletion verified
-
